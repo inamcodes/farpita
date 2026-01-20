@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player">
+        <div class="album">
+            <div class="album-art">
+                <img id="track-image" src="pizza.webp" alt="Album Art">
+            </div>
+            <div class="song-details">
+                <h2 id="title">Anywhere</h2>
+                <p id="artist">Ikson - Audio Library</p>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-row">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="buttons" aria-label="player controls">
+                <i class="ri-repeat-line control-btn" id="repeat"></i>
+                <i class="ri-skip-back-fill control-btn" id="prev"></i>
+
+                <div class="play-btn" id="play-container" title="Play/Pause">
+                    <i class="ri-play-fill" id="play"></i>
+                </div>
+
+                <i class="ri-skip-forward-fill control-btn" id="next"></i>
+                <i class="ri-shuffle-line control-btn" id="shuffle"></i>
+            </div>
+
+            <div class="meta">
+                <div class="list-title">Playlist</div>
+                <ul id="playlist">
+                    <!-- JS will populate -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
